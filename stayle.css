@@ -1,0 +1,438 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+background-color: #ffffff8a;
+font-family: Spartan,sans-serif;
+}
+.none{
+    display: none;
+}
+.block{
+    display: block;
+}
+.flex-wrap{
+    display: flex;
+    flex-wrap:wrap ;
+}
+.Big_screen{
+    display: block;
+}
+.Small_screen{
+    display: none;
+}
+.Small_screen>h1{
+    margin-top: 50px;
+}
+.mobile{
+    opacity: 2;
+}
+
+.Small_screen .box .week4 p{
+    font-size: 20px;
+}
+section{
+    margin: 20px 10px;
+}
+section div{
+    border: 2px solid #ccc;
+    margin-top: 20px;
+}
+.layout{
+position: relative;
+}
+.layout img{
+    width: 100%;
+}
+.vedio{
+    position:fixed;
+    top: 0;
+    left: 0;
+    z-index:100;
+}
+.changeWidth{
+    /* position: absolute; */
+    position:fixed;
+
+    top: 0;
+    left: 0;
+    width: 120%;
+    height: 100vh;
+    z-index:100;
+}
+
+.container{
+    /* display: flex; */
+    display: grid;
+    grid-template-columns: 65% 40%;
+    gap: 20px;
+    padding: 10px 20px;
+    width: 95%;
+   
+}
+/* start section_left */
+
+
+.container .section_left .sotialMedia{
+   position: relative;
+}
+.container .section_left .sotialMedia::before,
+.container .section_left .sotialMedia::after{
+    content: '';
+    position: absolute;
+    width: 5%;
+    height: 100%;
+    background-color: #fff;
+    top: 0;
+}
+.container .section_left .sotialMedia::after{
+    left: 95%;
+}
+
+.container .section_left .sotialMedia .media{
+    display: flex;
+    position: relative;
+    margin-left: 15%;
+    gap: 30px;
+    padding-top: 5px;
+   
+}
+.container .section_left .sotialMedia .media i{
+    padding: 15px;
+    border: 2px solid #eee;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.container .section_left .sotialMedia .media i:hover{
+    border-color: #03A9F4;
+}
+.section_left .Materials{
+    margin: 40px 0;
+}
+.section_left .Materials h1{
+    margin-bottom: 20px;
+}
+.weeks{
+    display: flex;
+        align-items: center;
+        justify-content: space-between;
+        box-shadow: 0 0 20px 0 #ddd;
+        padding: 10px 20px;
+        width: 100%;
+}
+ .box{
+    width: 98%;
+    font-size: 75%;
+    color: #000000;
+    border-radius: 10px;
+    transition: 0.5s;
+    cursor: pointer;
+    border: 2px solid transparent;
+   margin: 2px;
+}
+ @media (max-width : 710px) {
+    .weeks{
+        display: block;
+    }
+}
+
+ .box:hover{
+    border-color: #03A9F4;
+}
+ .box div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 10px;
+ 
+}
+.box>div:not(:last-child){
+    border-bottom: 2px solid #ccc;
+}
+ .box div i{
+    margin-right: 10px;
+}
+.container .section_left img,
+.container .section_right img{
+    width: 100%;
+}
+
+
+.section_left .Comments .All_box{
+    padding: 10px;
+    border: 2px solid transparent;
+transition: 0.3s;
+}
+.section_left .Comments .All_box:hover{
+    border-color: #03A9F4;
+}
+.section_left .Comments .All_box .c_box{
+    display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        font-size: 15px;
+        color: #333;
+        line-height: 1.5;
+        letter-spacing: 1px;
+        padding: 20px;
+        cursor: pointer;
+        
+        
+}
+.section_left .Comments .All_box .c_box:not(:last-child){
+    border-bottom: 1px solid #ccc;
+}
+.section_left .Comments .All_box .c_box .text{
+    display: grid;
+    gap: 10px;
+}
+.section_left .Comments img{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    padding: 2px;
+    background-color: #eee;
+    box-shadow: 0 0 20px 0 #ddd ;
+}
+textarea{
+    width: 90%;
+    min-height: 200px;
+    outline: none;
+    padding: 20px;
+    font-size: 20px;
+    border: none;
+    box-shadow: 0 0 20px #ddd ;
+    margin: 20px 10px;
+    border-radius: 10px;
+    margin-left: 5%;
+}
+.button{
+    padding: 15px 30px;
+    border: none;
+    color: white;
+    background-color: #4CAF50;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 6px;
+    text-transform: capitalize;
+    margin-left: 5%;
+
+}
+.button i{
+    font-size: 15px;
+    margin-left: 10px;
+}
+/* start responsive */
+/* @media (max-width:660px) {
+    .section_left .Comments .All_box .box .text h2{
+        font-size: 20px;
+    }
+} */
+@media (max-width:768px) {
+    .container{
+        display: block;
+        width: 100%;
+    }
+    .Big_screen{
+        display: none;
+    }
+    .Small_screen{
+        display: block;
+    }
+    .section_right{
+        display: none;
+        }
+        /* .container .section_left .sotialMedia .media{
+        display: flex ;
+        margin-left: 15%;
+        gap: 30px;
+        position: fixed;
+        top: 336px;
+        z-index: 50;
+        background-color: #fff;
+        width: 100%;
+        left: -83px;
+        padding-left: 50px;
+        padding-bottom: 30px;
+        padding-top: 20px;
+    } */
+}
+/* end responsive */
+/* end section_left */
+
+/* start section_right */
+.section_right{
+padding-top: 20px;
+}
+.section_right>p{
+    font-weight: bold;
+}
+ .progres{
+    position: relative;
+    height: 5px;
+    background-color: #ddd;
+    margin: 60px 0;
+}
+ .progres span{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background-color: #4CAF50;
+    transition: width 0.5s linear;
+    
+    
+}
+ .progres:hover span {
+    width: 63%;
+}
+ .progres span::before{
+    position: absolute;
+    content: '63%';
+    right: -10px;
+    font-size: 11px;
+    top: -40px;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+    padding: 5px;
+    font-weight: bold;
+    display: none;
+   
+}
+ .progres span::after{
+    position: absolute;
+    content: '';
+    border: 6px solid ;
+    border-color: #ccc transparent transparent transparent;
+    right: 0;
+    top: -12px;
+    display: none;
+     transition: 1s;
+}
+ .progres:hover span::before,
+ .progres:hover span::after{
+    display: block;
+}
+
+.section_right .box{
+    padding: 10px;
+    border: 1px solid #ddd;
+    font-size: 12px;
+    color: #3e3e3e;
+    cursor: pointer;
+    margin-bottom: 60px;
+    
+}
+.section_right .box:hover{
+    border-color: #03A9F4;
+}
+.section_right .box>h1{
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+.section_right .box>p{
+    font-weight: bold;
+}
+.section_right .box .week4{
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 12px;
+    color: #3e3e3e;
+    padding: 20px 0;
+}
+.section_right .box .week4 i{
+    font-size: 10px;
+}
+.section_right .box .week4:not(:last-child){
+    border-bottom: 1px solid #DDD;
+}
+.section_right .box .week4>div{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    /* flex-wrap: wrap; */
+    
+}
+ .Question{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 11px;
+    gap: 4px;
+    padding: 2px;
+    flex-wrap: wrap;
+}
+ .QUESTION0{
+    color: #e91e6357;
+    font-weight: bold;
+    background-color: #ff000021;
+    padding: 2px;
+}
+.MINUTES{
+    font-weight: bold;
+    padding: 2px;
+    color: #4CAF50;
+    background-color: #00800036;
+}
+ .Question2{
+    display: grid;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 11px;
+    gap: 4px;
+    padding: 2px;
+    flex-wrap: wrap;
+}
+
+/* end section_right */
+
+/* full_screen */
+.full_screen{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: black;
+    z-index: 200;
+}
+.full_screen{
+    width: 100%;
+    height: 100%;
+}
+.PDF{
+    width: 120%;
+    height: 120%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 200;
+    overflow: hidden;
+   transition: display 0.4s;
+}
+.PDF textarea{
+    width: 100%;
+    height: 100%; margin: 0;
+    padding: 30px;
+    padding-top: 50px;
+    
+}
+.PDF i{
+    position: fixed;
+    z-index: 500;
+    color: red;
+    left: 96%;
+    top: 15px;
+    padding: 5px;
+    border: 1px solid;
+    border-radius: 50%;
+    cursor: pointer;
+
+}
